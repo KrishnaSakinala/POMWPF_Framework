@@ -1,47 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="26914" started-at="2017-09-19T01:27:10Z" finished-at="2017-09-19T01:27:37Z">
+  <suite name="Suite" duration-ms="25753" started-at="2017-09-20T02:08:50Z" finished-at="2017-09-20T02:09:15Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="26914" started-at="2017-09-19T01:27:10Z" finished-at="2017-09-19T01:27:37Z">
+    <test name="Test" duration-ms="25753" started-at="2017-09-20T02:08:50Z" finished-at="2017-09-20T02:09:15Z">
       <class name="com.automationtesting.testcases.PlaceOrderTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="init" is-config="true" duration-ms="16285" started-at="2017-09-19T06:56:54Z" finished-at="2017-09-19T06:57:10Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="init" is-config="true" duration-ms="12887" started-at="2017-09-20T07:38:37Z" finished-at="2017-09-20T07:38:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="carousel()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="carousel" duration-ms="19" started-at="2017-09-19T06:57:10Z" finished-at="2017-09-19T06:57:10Z">
+        <test-method status="FAIL" signature="carousel()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="carousel" duration-ms="108" started-at="2017-09-20T07:38:50Z" finished-at="2017-09-20T07:38:50Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Title] but found [Automation Practice Site]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Title] but found [Automation Practice Site]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at com.automationtesting.basetest.BaseTest.verifyTitle(BaseTest.java:107)
+	at com.automationtesting.testcases.PlaceOrderTest.carousel(PlaceOrderTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- carousel -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="getResult" is-config="true" duration-ms="2" started-at="2017-09-19T06:57:10Z" finished-at="2017-09-19T06:57:10Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="getResult" is-config="true" duration-ms="494" started-at="2017-09-20T07:38:50Z" finished-at="2017-09-20T07:38:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=carousel status=SUCCESS method=PlaceOrderTest.carousel()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56] output={null}]]]>
+                <![CDATA[[TestResult name=carousel status=FAILURE method=PlaceOrderTest.carousel()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="placeOrder()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="placeOrder" duration-ms="26871" started-at="2017-09-19T06:57:10Z" finished-at="2017-09-19T06:57:37Z">
+        <test-method status="PASS" signature="placeOrder()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="placeOrder" duration-ms="25106" started-at="2017-09-20T07:38:50Z" finished-at="2017-09-20T07:39:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-19T06:57:37Z" finished-at="2017-09-19T06:57:37Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="getResult" is-config="true" duration-ms="1" started-at="2017-09-20T07:39:15Z" finished-at="2017-09-20T07:39:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=placeOrder status=SUCCESS method=PlaceOrderTest.placeOrder()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56] output={null}]]]>
+                <![CDATA[[TestResult name=placeOrder status=SUCCESS method=PlaceOrderTest.placeOrder()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@4667ae56]" name="tearDown" is-config="true" duration-ms="1166" started-at="2017-09-19T06:57:37Z" finished-at="2017-09-19T06:57:38Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automationtesting.testcases.PlaceOrderTest@3c0ecd4b]" name="tearDown" is-config="true" duration-ms="915" started-at="2017-09-20T07:39:16Z" finished-at="2017-09-20T07:39:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
