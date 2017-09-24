@@ -5,6 +5,11 @@
 	<artifactId>POMWPF_Framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <testtype></testtype>
+    </properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -23,8 +28,12 @@
 				<configuration>
 					<!-- <groups>1</groups> -->
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+                        <!--<suiteXmlFile>${browser}-chrome-testng.xml</suiteXmlFile>-->
+                        <suiteXmlFile>${testtype}-testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
 				</configuration>
 			</plugin>
 			

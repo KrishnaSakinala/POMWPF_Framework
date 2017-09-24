@@ -36,9 +36,13 @@ public class BaseTest {
 	public ExtentReports extent;
 	public ExtentTest test;
 
-	public FileInputStream fis = null;
-	public Properties prop = null;
 	public ExcelApiTest eat = null;
+
+	public FileInputStream configFis = null;
+	public Properties configProp = null;
+
+	public Properties envProp = null;
+	public FileInputStream envFis = null;
 
 	@BeforeSuite
 	public void init() throws Exception {
@@ -46,10 +50,25 @@ public class BaseTest {
 		eat = new ExcelApiTest(
 				System.getProperty("user.dir") + "/src/main/java/com/automationtesting/repo/TestData.xlsx");
 
-		fis = new FileInputStream(
+		configFis = new FileInputStream(
 				"/Users/krishnasakinala/hubiC/workspace/POMWPF_Framework/src/main/java/com/automationtesting/repo/config.properties");
-		prop = new Properties();
-		prop.load(fis);
+
+		configProp = new Properties();
+		configProp.load(configFis);
+
+		if (configProp.getProperty("environment").equals("dev")) {
+			envFis = new FileInputStream(
+					"/Users/krishnasakinala/hubiC/workspace/POMWPF_Framework/src/main/java/com/automationtesting/repo/devconfig.properties");
+			envProp = new Properties();
+			envProp.load(envFis);
+		}
+
+		if (configProp.getProperty("environment").equals("qa")) {
+			envFis = new FileInputStream(
+					"/Users/krishnasakinala/hubiC/workspace/POMWPF_Framework/src/main/java/com/automationtesting/repo/qaconfig.properties");
+			envProp = new Properties();
+			envProp.load(envFis);
+		}
 
 		if (extent == null) {
 			htmlReporter = new ExtentHtmlReporter(
@@ -71,14 +90,14 @@ public class BaseTest {
 
 		if (driver == null) {
 
-			if (prop.get("browser").equals("chrome")) {
+			if (configProp.get("browser").equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver", "/KRISHNA VOLUME/drivers/chromedriver");
 				driver = new ChromeDriver();
-			} else if (prop.get("browser").equals("firefox")) {
+			} else if (configProp.get("browser").equals("firefox")) {
 				System.setProperty("webdriver.gecko.driver", "/KRISHNA VOLUME/drivers/geckodriver");
 				driver = new FirefoxDriver();
 			}
-			driver.get(prop.getProperty("siteUrl"));
+			driver.get(envProp.getProperty("siteUrl"));
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 	}

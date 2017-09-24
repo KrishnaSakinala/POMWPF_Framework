@@ -8,6 +8,7 @@
           <include name="tearDown"/>
           <include name="getResult"/>
           <include name="carousel"/>
+          <include name="placeOrder"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.automationtesting.testcases.PlaceOrderTest -->
