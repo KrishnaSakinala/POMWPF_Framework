@@ -1,0 +1,10 @@
+com/automationtesting/pages/BasketPage.class
+com/automationtesting/pages/SearchResultsPage.class
+com/automationtesting/util/ExcelApiTest.class
+com/automationtesting/pages/HomePage.class
+com/automationtesting/basepage/BasePage.class
+com/automationtesting/pages/ProductDisplayPage.class
+com/automationtesting/repo/Locator.class
+com/automationtesting/util/DataUtil.class
+com/automationtesting/pages/CheckOutPage.class
+com/automationtesting/pages/PlaceOrderPage.class

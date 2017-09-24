@@ -8,6 +8,8 @@
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <testtype></testtype>
+        <browser></browser>
+        <environment></environment>
     </properties>
 
 	<build>
@@ -34,6 +36,13 @@
                     <includes>
                         <include>**/*.java</include>
                     </includes>
+                    
+                    <systemProperties>
+                        <pomBrowser>${browser}</pomBrowser>
+                        <pomEnvironment>${environment}</pomEnvironment>
+                        <pomTesttype>${testtype}</pomTesttype>
+                    </systemProperties>
+                    
 				</configuration>
 			</plugin>
 			

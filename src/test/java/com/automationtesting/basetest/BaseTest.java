@@ -56,6 +56,14 @@ public class BaseTest {
 		configProp = new Properties();
 		configProp.load(configFis);
 
+		if (System.getProperty("pomBrowser") != null && System.getProperty("pomEnvironment") != null) {
+			System.out.println("POM Browser is: " + System.getProperty("pomBrowser"));
+			System.out.println("POM Environment is: " + System.getProperty("pomEnvironment"));
+
+			configProp.setProperty("browser", System.getProperty("pomBrowser"));
+			configProp.setProperty("environment", System.getProperty("pomEnvironment"));
+		}
+
 		if (configProp.getProperty("environment").equals("dev")) {
 			envFis = new FileInputStream(
 					"/Users/krishnasakinala/hubiC/workspace/POMWPF_Framework/src/main/java/com/automationtesting/repo/devconfig.properties");
